@@ -59,7 +59,7 @@ jobs:
     # 新增：登录 NVIDIA NGC Registry
     - name: Log in to NVIDIA NGC Registry
       run: |
-        docker login nvcr.io -u $oauthtoken -p ¥NVIDIA_NGC_API_KEY
+        docker login nvcr.io -u $oauthtoken -p $NVIDIA_NGC_API_KEY
 
 
     - name: Build and push image Aliyun
