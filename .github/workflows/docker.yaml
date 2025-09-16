@@ -11,6 +11,7 @@ env:
   ALIYUN_NAME_SPACE: "${{ secrets.ALIYUN_NAME_SPACE }}"
   ALIYUN_REGISTRY_USER: "${{ secrets.ALIYUN_REGISTRY_USER }}"
   ALIYUN_REGISTRY_PASSWORD: "${{ secrets.ALIYUN_REGISTRY_PASSWORD }}"
+  NVIDIA_NGC_API_KEY: "${{ secrets.NVIDIA_NGC_API_KEY }}"
 
 jobs:
 
@@ -58,7 +59,7 @@ jobs:
     # 新增：登录 NVIDIA NGC Registry
     - name: Log in to NVIDIA NGC Registry
       run: |
-        echo "${{ secrets.NVIDIA_NGC_API_KEY }}" | docker login nvcr.io -u "tanmingzhu" --password-stdin
+        echo $NVIDIA_NGC_API_KEY | docker login nvcr.io -u "tanmingzhu" --password-stdin
 
 
     - name: Build and push image Aliyun
