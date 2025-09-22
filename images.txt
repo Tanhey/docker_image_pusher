@@ -1,2 +1,2 @@
 # CUDA 12.4、6 + cuDNN 8 runtime (推荐：PyTorch、Paddle 通用)
-nvcr.io/nvidia/cuda:12.6.0-runtime-ubuntu22.04
+ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddle:3.2.0-gpu-cuda12.6-cudnn9.5
